@@ -36,7 +36,7 @@ function onTrigger(player, itemId, target)
         end
     end
 
-    -- search target inventory for item and deletes if exists; if equipped then unequip first
+    -- search target inventory for item and deletes if found; if equipped then unequip first
     for i = tpz.inv.INVENTORY, tpz.inv.WARDROBE4 do -- inventory locations enums
         if (targ:hasItem(itemId, i)) then
             if (targ:canEquipItem(itemId)) then
